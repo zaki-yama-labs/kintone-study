@@ -22,7 +22,7 @@
         resp['records'].forEach(record => {
           msg += `・ ${record['文字列__1行_']['value']}\n`;
         });
-        alert(`${user.name}が担当している会社\n\n${msg}`);
+        alert(`【${user.name}】が担当している会社\n\n${msg}`);
       }
     });
   });
