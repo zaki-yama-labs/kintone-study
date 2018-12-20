@@ -10,7 +10,15 @@
     myIndexButton.onclick = () => {
       window.alert('メニュー部');
     };
-
     kintone.app.record.getHeaderMenuSpaceElement().appendChild(myIndexButton);
+
+    // 任意のスペースフィールドにボタンを設置
+    const mySpaceFieldButton = document.createElement('button');
+    mySpaceFieldButton.id = 'my_space_field_button';
+    mySpaceFieldButton.innerHTML = 'スペースボタン';
+    mySpaceFieldButton.onclick = () => {
+      window.alert('スペースフィールド');
+    };
+    kintone.app.record.getSpaceElement('my_space_field').appendChild(mySpaceFieldButton);
   });
 })();
