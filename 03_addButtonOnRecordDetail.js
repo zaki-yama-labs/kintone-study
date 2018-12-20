@@ -11,6 +11,6 @@
       window.alert('メニュー部');
     };
 
-    kintone.app.getHeaderMenuSpaceElement().appendChild(myIndexButton);
+    kintone.app.record.getHeaderMenuSpaceElement().appendChild(myIndexButton);
   });
 })();
