@@ -5,10 +5,18 @@
   kintone.events.on('app.record.detail.show', (event) => {
     const myMenuButton = document.createElement('button');
     myMenuButton.id = 'my_menu_button';
-    myMenuButton.innerHTML = 'メニュー部ボタン';
+    myMenuButton.innerHTML = '04.メニュー部ボタン';
     myMenuButton.onclick = () => {
-      // 取得したレコードIDを出力する
-      window.alert('id: ' + kintone.app.record.getId());
+      const mySpaceField = kintone.app.record.getSpaceElement('my_space_field');
+      mySpaceField.parentNode.style.width = '400px';
+
+      // 更新日時を取得する
+      let updatedAt = '';
+      const rec = kintone.app.record.get();
+      if (rec) {
+        updatedAt = rec.record['更新日時'].value;
+      }
+      kintone.app.record.getSpaceElement('my_space_field').innerHTML = updatedAt;
     };
     kintone.app.record.getHeaderMenuSpaceElement().appendChild(myMenuButton);
   });
