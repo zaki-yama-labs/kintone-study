@@ -24,4 +24,12 @@
 
     return event;
   });
+
+  kintone.events.on(['app.record.create.show', 'app.record.edit.show'], event => {
+    const record = event.record;
+
+    record['合計'].disabled = true;
+
+    return event;
+  });
 })();
