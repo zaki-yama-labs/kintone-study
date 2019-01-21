@@ -24,3 +24,10 @@
 ![](images/kintone-revert.png)
 
 
+### 1-4 一覧の作成と設定
+
+- 一覧の絞り込み条件、管理者以外は保存できない
+  - URL を保存するブックマーク機能が代替手段
+  - Salesforce は個人で作成・保存でき、共有範囲をある程度指定できる
+
+![](images/sf-list-view.png)
