@@ -23,4 +23,5 @@
     record['合計'].value = subTotal;
 
     return event;
+  });
 })();
